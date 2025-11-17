@@ -1,0 +1,47 @@
+-- 1NF: Question 1
+
+create table Students(studentid numeric, name varchar(20),phonenumbers varchar(10));
+insert into Students values(101,'Ravi',98765);
+insert into Students values(101,'Ravi',87654);
+insert into Students values(102,'Anita',99900);
+insert into Students values(103,'John',88888);
+insert into Students values(103,'John',77777);
+insert into Students values(103,'John',66666);
+
+-- 1NF: Question 2
+
+create table Orders(orderid numeric,customer varchar(20),items varchar(20));
+insert into Orders values(01,'Raj','Pen');
+insert into Orders values(01,'Raj','Pencil');
+insert into Orders values(02,'Sam','Notebook');
+insert into Orders values(03,'Raj','Eraser');
+insert into Orders values(03,'Raj','Marker');
+insert into Orders values(03,'Raj','Pen');
+
+-- 1NF: Question 3
+
+create table Employees(empid numeric,empname varchar(20),skills varchar(20));
+insert into Employees values(1,'Ramesh','Java');
+insert into Employees values(1,'Ramesh','Python');
+insert into Employees values(2,'Anita','Excel');
+insert into Employees values(3,'John','C++');
+insert into Employees values(3,'John','Java');
+insert into Employees values(3,'John','HTML');
+
+-- 1NF: Question 4
+
+create table Customer(custid numeric,name varchar(20),address varchar(20));
+insert into Customer values(1,'Meera','Hyderabad');
+insert into Customer values(1,'Meera','Telangana');
+insert into Customer values(1,'Meera','India');
+insert into Customer values(2,'Ajay','Pune');
+insert into Customer values(2,'Ajay','Maharashtra');
+insert into Customer values(2,'Ajay','India');
+
+
+-- 2NF: Question 1
+
+create table Student1_2nf(studentid numeric primary key,studentname varchar(20));
+create table course1_2nf(courseid numeric primary key,coursename varchar(20));
+create table student1_course1_2nf(studentid numeric,courseid numeric,faculty varchar(20),marks numeric,primary key(studentid,courseid));
+
