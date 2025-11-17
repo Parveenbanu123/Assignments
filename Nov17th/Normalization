@@ -39,9 +39,167 @@ insert into Customer values(2,'Ajay','Maharashtra');
 insert into Customer values(2,'Ajay','India');
 
 
--- 2NF: Question 1
+-- 2NF: Question 5
 
 create table Student1_2nf(studentid numeric primary key,studentname varchar(20));
 create table course1_2nf(courseid numeric primary key,coursename varchar(20));
 create table student1_course1_2nf(studentid numeric,courseid numeric,faculty varchar(20),marks numeric,primary key(studentid,courseid));
+
+insert into Student1_2nf values(1,"Ramesh");
+insert into Student1_2nf values(2,"Anita");
+
+select * from Student1_2nf;
+
+insert into course1_2nf values('C1',"Java","Amit");
+insert into course1_2nf values('C2',"Python","Seema");
+
+select * from course1_2nf;
+
+insert into student1_course1_2nf values(1,'C1',90);
+insert into student1_course1_2nf values(1,'C2',85);
+insert into student1_course1_2nf values(2,'C1',78);
+
+select * from student1_course1_2nf;
+
+
+-- 2NF: Question 6
+
+
+create table Orders(orderid numeric primary key,customername varchar(20));
+create table Product(productid varchar(3) primary key,productname varchar(20));
+create table Order_Product(orderid numeric,productid varchar(3),quantity numeric,primary key(orderid,productid));
+
+show tables;
+insert into Orders values(1,"Raj");
+insert into Orders values(2,"Meena");
+
+select * from Orders;
+
+insert into Product values('P1',"Pen");
+insert into Product values('P2',"Pencil");
+
+select * from Product;
+
+insert into Order_Product values(1,'P1',2);
+insert into Order_Product values(1,'P2',1);
+insert into Order_Product values(2,'P1',3);
+
+select * from Order_Product;
+
+
+-- 2NF: Question 7
+
+
+create table Employee(empid numeric primary key,empname varchar(20));
+create table Project(projectid varchar(3) primary key,projectname varchar(20));
+create table Employee_Project(empid numeric,projectid varchar(3),hoursworked numeric,primary key(empid,projectid));
+
+show tables;
+insert into Employee values(1,"Ravi");
+insert into Employee values(2,"Anita");
+
+select * from Employee;
+
+insert into Project values('P1',"Webapp");
+insert into Project values('P2',"Mobileapp");
+
+select * from Project;
+
+insert into Employee_Project values(1,'P1',20);
+insert into Employee_Project values(1,'P2',30);
+insert into Employee_Project values(2,'P1',25);
+
+select * from Employee_Project;
+
+
+-- 2NF: Question 8
+
+
+create table Driver(driverid varchar(3) primary key,drivername varchar(20));
+create table Route(routeid varchar(3) primary key,routename varchar(20));
+create table Driver_Route(driverid varchar(3),routeid varchar(3),distance numeric,primary key(driverid,routeid));
+
+show tables;
+insert into Driver values('D1',"Amit");
+insert into Driver values('D2',"Sunil");
+
+select * from Driver;
+
+insert into Route values('R1',"Airport Route");
+insert into Route values('R2',"City Route");
+
+select * from Route;
+
+insert into Driver_Route values('D1','R1',40);
+insert into Driver_Route values('D1','R2',20);
+insert into Driver_Route values('D2','R1',40);
+
+select * from Driver_Route;
+
+-- 2NF: Question 9
+
+
+--1NF 
+
+
+create table Sales(orderid numeric,customername varchar(20),city varchar(20),productid varchar(3),productname varchar(20),price numeric,quantity numeric);
+
+
+insert into Sales values(1,"Ravi","Mumbai",'P1',"Pen",10,2);
+insert into Sales values(1,"Ravi","Mumbai",'P1',"Pen",10,3);
+insert into Sales values(2,"Meena","Delhi",'P2',"Book",100,1);
+insert into Sales values(2,"Meena","Delhi",'P3',"Bag",500,1);
+insert into Sales values(2,"Meena","Delhi",'P3',"Bag",500,2);
+
+--2NF
+
+create table Orders(orderid numeric primary key,customername varchar(20),city varchar(20));
+create table Product(productid varchar(3) primary key,productname varchar(20),Price numeric);
+create table Order_Product(orderid numeric,productid varchar(3),quantity numeric,primary key(orderid,productid));
+
+show tables;
+insert into Orders values(1,"Ravi","Mumbai");
+insert into Orders values(2,"Meena","Delhi");
+
+select * from Orders;
+
+insert into Product values('P1',"Pen",10);
+insert into Product values('P2',"Book",100);
+insert into Product values('P3',"Bag",500);
+
+
+select * from Product;
+
+insert into Order_Product values(1,'P1',2);
+insert into Order_Product values(1,'P2',3);
+insert into Order_Product values(2,'P1',1);
+insert into Order_Product values(2,'P2',1);
+insert into Order_Product values(2,'P3',2);
+
+select * from Order_Product;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
