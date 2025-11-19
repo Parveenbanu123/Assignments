@@ -7,7 +7,9 @@ set SQL_SAFE_UPDATES=0;
 update customers set creditLimit=creditLimit+(creditLimit*10/100) where country='Germany';
 
 
--- delete from orders where orderDate<'2005-01-01';
+delete  from orders where orderdate<'2005-01-01';
+alter table orderdetails drop foreign key orderdetails_ibfk_1;
+alter table orderdetails add constraint orderdetails_ibfk_1 foreign key(orderNumber) references orders(orderNumber) on delete cascade;
 
 
 insert  into products(productCode,productName,productLine,productScale,productVendor,productDescription,quantityInStock,buyPrice,MSRP) values 
@@ -24,7 +26,7 @@ insert into payments(customerNumber,checkNumber,paymentdate,amount) values(500,'
 update offices set phone='+38 12 5678 1234' where city='London';
 
 
--- delete from products where 
+delete from products where productCode not in (select productcode from orderdetails);
 
 
 insert  into employees(employeeNumber,lastName,firstName,extension,email,officeCode,reportsTo,jobTitle) values 
@@ -56,19 +58,3 @@ select * from orders where comments like '%urgent%';
 select * from payments where paymentdate>='2003-01-01' and paymentdate<='2003-12-30';
 
 
-delete  from orders where orderdate<'2005-01-01';
-alter table orderdetails drop foreign key orderdetails_ibfk_1;
-alter table orderdetails add constraint orderdetails_ibfk_1 foreign key(orderNumber) references orders(orderNumber) on delete cascade;
-show create table orderdetails;
-
-delete from products where productCode not in (select productcode from orderdetails);
-
-select productcode from products;
-select productcode from orderdetails;
-
--- Nov19th
-select customernumber,count(*) paymentCount from payments group by customernumber;
-
-select customernumber,count(*) paymentCount from payments group by customernumber having count(*)>3 ;
-
-select officecode,count(*) EmployeeCount from employees group by officecode;
