@@ -1,0 +1,7 @@
+-- Nov19th
+
+select customernumber,count(*) paymentCount from payments group by customernumber;
+
+select customernumber,count(*) paymentCount from payments group by customernumber having count(*)>3 ;
+
+select officecode,count(*) EmployeeCount from employees group by officecode;
