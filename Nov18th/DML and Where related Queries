@@ -1,0 +1,56 @@
+-- 18th November
+
+insert into customers values(500,'Parveen','Banu','Parveen','1234509876','Kuniyamuthur','Coimbatore','Coimbatore','Tamilnadu','654321','India',1056,50.50);
+
+
+set SQL_SAFE_UPDATES=0;
+update customers set creditLimit=creditLimit+(creditLimit*10/100) where country='Germany';
+
+
+-- delete from orders where orderDate<'2005-01-01';
+
+
+insert  into products(productCode,productName,productLine,productScale,productVendor,productDescription,quantityInStock,buyPrice,MSRP) values 
+('S20_1800','1969 Harley Davidson Ultimate Chopper','Classic Cars','1:10','Min Lin Diecast','Attention car enthusiasts: Make your wildest car ownership dreams come true. 
+Whether you are looking for classic muscle cars, dream sports cars or movie-inspired miniatures, you will find great choices in this category. 
+These replicas feature superb attention to detail and craftsmanship and offer features such as working steering system, opening forward compartment, opening rear trunk with removable spare wheel, 4-wheel independent spring suspension, and so on. 
+The models range in size from 1:10 to 1:24 scale and include numerous limited edition and several out-of-production vehicles. All models include a certificate of authenticity from their manufacturers and come fully assembled and ready for display in the home or office.',
+7933,'48.81','95.70');
+
+
+insert into payments(customerNumber,checkNumber,paymentdate,amount) values(500,'PC123456','2003-10-02',20000.80);
+
+
+update offices set phone='+38 12 5678 1234' where city='London';
+
+
+-- delete from products where 
+
+
+insert  into employees(employeeNumber,lastName,firstName,extension,email,officeCode,reportsTo,jobTitle) values 
+(1038,'Parveen','Banu','x5800','dmurphy@classicmodelcars.com','1',NULL,'President');
+
+
+select * from customers where creditLimit>50000;
+
+
+select * from employees join offices on employees.officecode=offices.officecode where employees.officecode=
+(select officecode from offices where city='San Francisco');
+
+
+select * from orders where status='Shipped' and orderdate >='2004-01-01' and orderdate<='2004-12-30';
+
+
+select * from products where buyprice>50 and buyprice<100;
+
+
+select * from employees where reportsTo=1143;
+
+
+select * from customers where city like 'S%';
+
+
+select * from orders where comments like '%urgent%';
+
+
+select * from payments where paymentdate>='2003-01-01' and paymentdate<='2003-12-30';
