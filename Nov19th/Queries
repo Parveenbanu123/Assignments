@@ -111,40 +111,82 @@ select p.customerNumber,p.paymentDate,p.amount,pr.productLine from payments p jo
 orderdetails od on o.orderNumber = od.orderNumber join products pr on od.productCode = pr.productCode order by p.customerNumber, p.paymentDate, pr.productLine;
 
 
+--Subqueries
+--43. Find customers who have made the highest total payment.
 
- --Built-in Functions (MySQL)
- --52. Display the current date and time using a built-in function.
+
+--44. List employees who work in the same office as 'Diane Murphy'.
+select employeenumber,concat(firstname,lastname) Employeename from employees where officecode=
+(select officecode from employees where concat(firstname,lastname)='DianeMurphy'); 
+
+
+--45. Show products that have never been ordered.
+select productcode,productname from products where productcode not in(select distinct ordernumber from orderdetails);
+
+
+--46. Get the names of customers whose payments are above the average payment amount.
+select customernumber,customername from customers where customernumber in 
+(select customernumber from payments where amount>(select avg(amount) from payments));
+
+
+--47. List product lines that have more than 5 products.
+select productLine from products group by productLine having count(productCode) > 5;
+
+
+--48. Show customers who have not made any payment.
+select customerNumber, customerName from customers where customerNumber not in (select distinct customerNumber from payments);
+
+
+--49. Find the employee(s) with the highest number of customers reporting to them.
+select employeeNumber, firstName, lastName from employees where employeeNumber in (
+select salesRepEmployeeNumber from customers group by salesRepEmployeeNumber having count(customerNumber) = (
+select max(custCount) from (select count(customerNumber) as custCount from customers
+group by salesRepEmployeeNumber) as counts));
+
+
+--50. List products with the highest price in each product line.
+select productLine, productName, buyPrice from products p where buyPrice = (select MAX(buyPrice) from products where productLine = p.productLine );
+
+
+--51. Show customers who ordered the same product more than once.
+select distinct c.customerNumber, c.customerName from customers c where c.customerNumber in (
+    select o.customerNumber from orders o join orderdetails od on o.orderNumber = od.orderNumber group by o.customerNumber, od.productCode
+    having COUNT(od.productCode) > 1);
+
+
+--Built-in Functions (MySQL)
+--52. Display the current date and time using a built-in function.
 select now();
 
 
- 53. Find the total number of customers using COUNT().
+--53. Find the total number of customers using COUNT().
 select count(*) CustomersCount from employees;
 
 
- 54. Show the first 5 characters of each customer's name using SUBSTRING().
+--54. Show the first 5 characters of each customer's name using SUBSTRING().
 select substring(firstname,1,5) FirstFiveChars from employees;
 
 
- 55. List orders placed in the last 30 days using NOW() and DATEDIFF().
+--55. List orders placed in the last 30 days using NOW() and DATEDIFF().
 select * from orders where datediff(now(),orderdate)<=30;
 
 
- 56. Format the order date in 'dd-mm-yyyy' format using DATE_FORMAT().
+--56. Format the order date in 'dd-mm-yyyy' format using DATE_FORMAT().
 select date_format(orderdate,'%d-%m-%Y') FormatedDate from orders;
 
 
- 57. Display the length of each customer name.
+--57. Display the length of each customer name.
 select customername,length(customername) Length from customers;
 
 
- 58. Convert all employee last names to lowercase.
+--58. Convert all employee last names to lowercase.
 select firstname,lower(lastname) from employees;
 
 
- 59. Show total sales amount for each order using quantityOrdered * priceEach.
+--59. Show total sales amount for each order using quantityOrdered * priceEach.
 select ordernumber,(quantityordered*priceeach) TotalAmount from orderdetails;
 
 
- 60. Extract year and month from payment dates
+--60. Extract year and month from payment dates
 select year(paymentdate) PaymentYear,monthname(paymentdate) PaymentMonth from payments;
 
