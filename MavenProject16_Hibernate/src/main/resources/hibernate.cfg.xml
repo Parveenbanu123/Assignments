@@ -13,7 +13,10 @@
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
-		<mapping resource="student.hbm.xml"></mapping>
+		<!-- <mapping resource="student.hbm.xml"></mapping>
+		<mapping resource="course.hbm.xml"></mapping> -->
+		<mapping class="com.mphasis.model.Student"></mapping>
+		<mapping class="com.mphasis.model.Course"></mapping>
 	</session-factory>
 
 </hibernate-configuration>

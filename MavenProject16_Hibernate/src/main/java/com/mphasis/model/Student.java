@@ -1,16 +1,30 @@
 package com.mphasis.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="student_table")
 public class Student {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int studId;
 	private String studName;
-	private String course;
+	@OneToOne
+	@JoinColumn(name="cid",referencedColumnName = "courseId",unique=true)
+	private Course course;
 	private String mobile;
 	private String email;
 	
 	public Student() {
 		super();
 	}
-	public Student(int studId, String studName, String course, String mobile, String email) {
+	public Student(int studId, String studName, Course course, String mobile, String email) {
 		super();
 		this.studId = studId;
 		this.studName = studName;
@@ -30,10 +44,10 @@ public class Student {
 	public void setStudName(String studName) {
 		this.studName = studName;
 	}
-	public String getCourse() {
+	public Course getCourse() {
 		return course;
 	}
-	public void setCourse(String course) {
+	public void setCourse(Course course) {
 		this.course = course;
 	}
 	public String getMobile() {

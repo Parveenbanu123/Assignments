@@ -2,11 +2,13 @@ package com.mphasis;
 
 import java.util.List;
 
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.mphasis.model.Course;
 import com.mphasis.model.Student;
 
 public class App {
@@ -53,7 +55,13 @@ public class App {
 //       else {
 //    	   System.out.println("No student found");
 //       }
-       txn.commit();
+       
+//       Course c=new Course(1,"Java",25000);
+//       session.save(c);
+//       txn.commit();
+//       System.out.println("Course Inserted successfully");
+       
+       
        session.close();
        factory.close();
        
