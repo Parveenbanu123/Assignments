@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+	<context:property-placeholder location="classpath:data.properties"/> <!-- Dynamic input -->
+
+	<bean name="person" class="com.mphasis.beans.Person" scope="prototype" >
+		<constructor-arg name="id" value="${Person.id}"></constructor-arg>
+		<constructor-arg name="name" value="${Person.name}"></constructor-arg>
+		<constructor-arg name="age" value="${Person.age}"></constructor-arg>
+		 <constructor-arg name="address" ref="addr"></constructor-arg>  <!-- contains another bean -->
+		 <!-- <constructor-arg name="langs">  object is list 
+			<list>
+				<value>#{'${Person.langs}'.split(',')}</value>
+			</list>
+		</constructor-arg>  -->
+		<constructor-arg name="langs">
+			<array>
+				<value>${langs[0]}</value>
+				<value>${langs[1]}</value>
+				<value>${langs[2]}</value>
+				<value>${langs[3]}</value>
+			</array>
+		</constructor-arg>
+	</bean>
+	
+	<bean name="addr" class="com.mphasis.beans.Address" >
+		<!-- <constructor-arg name="addId" value="71"></constructor-arg>
+		<constructor-arg name="city" value="Coimbatore"></constructor-arg>
+		<constructor-arg name="state" value="TamilNadu"></constructor-arg> -->
+		<property name="addId" value="${Address.addId}"></property>
+		<property name="city" value="${Address.city}"></property>
+		<property name="state" value="${Address.state}"></property>
+	</bean>
+
+
+</beans>
