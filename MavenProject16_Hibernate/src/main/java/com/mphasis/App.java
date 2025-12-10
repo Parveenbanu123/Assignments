@@ -23,13 +23,19 @@ public class App {
 //       	 System.out.println("Record added successfully");
 //       txn.commit();
        //Get all students
-       List<Student> studList=session.createQuery("From Student ",Student.class).list();
-       for(Student a:studList) {
-    	   System.out.println(a);
-       }
+//       List<Student> studList=session.createQuery("From Student ",Student.class).list();
+//       for(Student a:studList) {
+//    	   System.out.println(a);
+//       }
        //get single student
-       //Student s=session.get(Student.class,1 );
-       //System.out.println(s);
+       Student s=session.get(Student.class,1 );
+       System.out.println(s);
+       Student s1=session.get(Student.class,1 );
+       //System.out.println(s1);
+       if(s==s1)
+    	   System.out.println("s1 received from Session cache");
+       else
+    	   System.out.println("Both are different");
        
        //update student
 //       Student s=session.get(Student.class, 2);
