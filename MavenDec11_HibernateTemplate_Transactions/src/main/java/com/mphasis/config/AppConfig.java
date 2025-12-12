@@ -1,0 +1,71 @@
+package com.mphasis.config;
+
+import java.util.Properties;
+
+
+import javax.sql.DataSource;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import com.mphasis.entities.Order;
+import com.mphasis.entities.Payment;
+
+@Configuration
+@ComponentScan("com.mphasis")
+@EnableTransactionManagement
+@PropertySource("classpath:application.properties")
+public class AppConfig {
+	
+	@Autowired
+	Environment env;
+	
+	@Bean
+	public DataSource getDataSource() {
+		DriverManagerDataSource ds=new DriverManagerDataSource();
+		ds.setDriverClassName(env.getProperty("db.driver"));
+		ds.setUrl(env.getProperty("db.url"));
+		ds.setUsername(env.getProperty("db.username"));
+		ds.setPassword(env.getProperty("db.password"));
+		return ds;
+	}
+	
+	@Bean
+	public LocalSessionFactoryBean sessionFactory() {
+		LocalSessionFactoryBean factory=new LocalSessionFactoryBean();
+		factory.setDataSource(getDataSource());
+		factory.setAnnotatedClasses(Order.class,Payment.class);
+		factory.setHibernateProperties(getHibernateProps());
+		return factory;
+	}
+
+	public Properties getHibernateProps() {
+		Properties props=new Properties();
+		props.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
+		props.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+		props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
+		return props;
+	}
+	
+	@Bean
+	public HibernateTemplate hibernateTemplate(SessionFactory sf) {
+		return new HibernateTemplate(sf);
+	}
+	
+	@Bean
+	public HibernateTransactionManager getManager(SessionFactory sf) {
+		return new HibernateTransactionManager(sf);
+	}
+	
+	
+}
