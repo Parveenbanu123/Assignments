@@ -1,0 +1,222 @@
+2025-12-13 15:24:37 INFO  c.m.EmployeeManagementAppApplication Starting EmployeeManagementAppApplication using Java 21.0.4 with PID 20160 (C:\Users\s.parveenbanu\eclipse-workspace\EmployeeManagementApp\target\classes started by s.parveenbanu in C:\Users\s.parveenbanu\eclipse-workspace\EmployeeManagementApp)
+2025-12-13 15:24:37 DEBUG c.m.EmployeeManagementAppApplication Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-13 15:24:37 INFO  c.m.EmployeeManagementAppApplication No active profile set, falling back to 1 default profile: "default"
+2025-12-13 15:24:37 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-13 15:24:37 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-13 15:24:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-13 15:24:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2025-12-13 15:24:38 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat initialized with port 8092 (http)
+2025-12-13 15:24:38 INFO  o.a.catalina.core.StandardService Starting service [Tomcat]
+2025-12-13 15:24:38 INFO  o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-13 15:24:38 INFO  o.s.b.w.c.s.WebApplicationContextInitializer Root WebApplicationContext: initialization completed in 1115 ms
+2025-12-13 15:24:39 INFO  o.h.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-13 15:24:39 INFO  org.hibernate.Version HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-13 15:24:39 INFO  o.s.o.j.p.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-13 15:24:39 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2025-12-13 15:24:39 INFO  com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7184c54
+2025-12-13 15:24:39 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2025-12-13 15:24:40 INFO  o.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mysql_spring_proj]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.42
+	Default catalog/schema: mysql_spring_proj/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-13 15:24:40 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-13 15:24:40 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-13 15:24:41 INFO  o.s.d.j.r.q.QueryEnhancerFactories Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-13 15:24:41 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-13 15:24:41 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat started on port 8092 (http) with context path '/'
+2025-12-13 15:24:41 INFO  c.m.EmployeeManagementAppApplication Started EmployeeManagementAppApplication in 4.172 seconds (process running for 5.277)
+2025-12-13 15:26:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-13 15:26:01 INFO  o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2025-12-13 15:26:01 INFO  o.s.web.servlet.DispatcherServlet Completed initialization in 2 ms
+2025-12-13 15:26:01 INFO  c.m.controller.EmployeeController Request to findAll Employees
+2025-12-13 15:26:01 INFO  c.m.controller.EmployeeController Fetching all Employees
+2025-12-13 15:27:05 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-12-13 15:27:05 INFO  o.s.boot.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-13 15:27:05 INFO  o.s.boot.tomcat.GracefulShutdown Graceful shutdown complete
+2025-12-13 15:27:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-13 15:27:05 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+2025-12-13 15:27:05 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+2025-12-13 15:27:05 INFO  c.m.EmployeeManagementAppApplication Starting EmployeeManagementAppApplication using Java 21.0.4 with PID 20160 (C:\Users\s.parveenbanu\eclipse-workspace\EmployeeManagementApp\target\classes started by s.parveenbanu in C:\Users\s.parveenbanu\eclipse-workspace\EmployeeManagementApp)
+2025-12-13 15:27:05 DEBUG c.m.EmployeeManagementAppApplication Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-13 15:27:05 INFO  c.m.EmployeeManagementAppApplication No active profile set, falling back to 1 default profile: "default"
+2025-12-13 15:27:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-13 15:27:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2025-12-13 15:27:05 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat initialized with port 8092 (http)
+2025-12-13 15:27:05 INFO  o.a.catalina.core.StandardService Starting service [Tomcat]
+2025-12-13 15:27:05 INFO  o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-13 15:27:05 INFO  o.s.b.w.c.s.WebApplicationContextInitializer Root WebApplicationContext: initialization completed in 281 ms
+2025-12-13 15:27:05 INFO  o.h.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-13 15:27:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-13 15:27:05 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-2 - Starting...
+2025-12-13 15:27:05 INFO  com.zaxxer.hikari.pool.HikariPool HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@596590a6
+2025-12-13 15:27:05 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-2 - Start completed.
+2025-12-13 15:27:05 INFO  o.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mysql_spring_proj]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.42
+	Default catalog/schema: mysql_spring_proj/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-13 15:27:05 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-13 15:27:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-13 15:27:06 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-13 15:27:06 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat started on port 8092 (http) with context path '/'
+2025-12-13 15:27:06 INFO  c.m.EmployeeManagementAppApplication Started EmployeeManagementAppApplication in 0.578 seconds (process running for 149.904)
+2025-12-13 15:27:06 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+2025-12-13 15:27:14 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-13 15:27:14 INFO  o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2025-12-13 15:27:14 INFO  o.s.web.servlet.DispatcherServlet Completed initialization in 1 ms
+2025-12-13 15:27:14 INFO  c.m.controller.EmployeeController Request to findAll Employees
+2025-12-13 15:27:14 INFO  com.mphasis.service.EmployeeService Fetching all Employees
+2025-12-13 15:28:59 INFO  c.m.controller.EmployeeController Request to save an Employee
+2025-12-13 15:28:59 INFO  com.mphasis.service.EmployeeService Saving an Employee
+2025-12-13 15:29:12 INFO  c.m.controller.EmployeeController Request to save an Employee
+2025-12-13 15:29:12 INFO  com.mphasis.service.EmployeeService Saving an Employee
+2025-12-13 15:29:24 INFO  c.m.controller.EmployeeController Request to findAll Employees
+2025-12-13 15:29:24 INFO  com.mphasis.service.EmployeeService Fetching all Employees
+2025-12-13 15:29:42 INFO  c.m.controller.EmployeeController Request to find Employee by Id
+2025-12-13 15:29:42 INFO  com.mphasis.service.EmployeeService Retrieving Employee by Id
+2025-12-13 15:33:15 INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Application shutdown requested.
+2025-12-13 15:33:15 INFO  o.s.boot.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-13 15:33:15 INFO  o.s.boot.tomcat.GracefulShutdown Graceful shutdown complete
+2025-12-13 15:33:15 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-13 15:33:15 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown initiated...
+2025-12-13 15:33:15 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown completed.
+2025-12-13 15:53:53 INFO  c.m.EmployeeManagementAppApplication Starting EmployeeManagementAppApplication using Java 21.0.4 with PID 20752 (C:\Users\s.parveenbanu\eclipse-workspace\EmployeeManagementApp\target\classes started by s.parveenbanu in C:\Users\s.parveenbanu\eclipse-workspace\EmployeeManagementApp)
+2025-12-13 15:53:53 DEBUG c.m.EmployeeManagementAppApplication Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-13 15:53:53 INFO  c.m.EmployeeManagementAppApplication No active profile set, falling back to 1 default profile: "default"
+2025-12-13 15:53:53 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-13 15:53:53 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-13 15:53:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-13 15:53:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2025-12-13 15:53:54 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat initialized with port 8092 (http)
+2025-12-13 15:53:54 INFO  o.a.catalina.core.StandardService Starting service [Tomcat]
+2025-12-13 15:53:54 INFO  o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-13 15:53:54 INFO  o.s.b.w.c.s.WebApplicationContextInitializer Root WebApplicationContext: initialization completed in 1285 ms
+2025-12-13 15:53:54 INFO  o.h.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-13 15:53:54 INFO  org.hibernate.Version HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-13 15:53:55 INFO  o.s.o.j.p.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-13 15:53:55 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2025-12-13 15:53:55 INFO  com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a437d92
+2025-12-13 15:53:55 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2025-12-13 15:53:55 INFO  o.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mysql_spring_proj]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.42
+	Default catalog/schema: mysql_spring_proj/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-13 15:53:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-13 15:53:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-13 15:53:56 INFO  o.s.d.j.r.q.QueryEnhancerFactories Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-13 15:53:56 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-13 15:53:57 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat started on port 8092 (http) with context path '/'
+2025-12-13 15:53:57 INFO  c.m.EmployeeManagementAppApplication Started EmployeeManagementAppApplication in 4.645 seconds (process running for 5.684)
+2025-12-13 15:54:13 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-13 15:54:13 INFO  o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2025-12-13 15:54:13 INFO  o.s.web.servlet.DispatcherServlet Completed initialization in 1 ms
+2025-12-13 15:54:13 INFO  c.m.controller.EmployeeController Request to findAll Employees
+2025-12-13 15:54:13 INFO  com.mphasis.aop.LoggingAspect Entering method: findAll
+2025-12-13 15:54:14 INFO  com.mphasis.aop.LoggingAspect Exiting method: findAll
+2025-12-13 15:54:14 INFO  com.mphasis.aop.LoggingAspect findAll
+2025-12-13 15:55:34 INFO  c.m.controller.EmployeeController Request to find Employee by Id
+2025-12-13 15:55:34 INFO  com.mphasis.aop.LoggingAspect Entering method: findById
+2025-12-13 15:55:34 ERROR com.mphasis.aop.LoggingAspect Service Exception Thrown: findById,message=No value present
+2025-12-13 15:55:34 INFO  com.mphasis.aop.LoggingAspect findById
+2025-12-13 15:55:34 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.mphasis.service.EmployeeService.findById(EmployeeService.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:48)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.mphasis.service.EmployeeService$$SpringCGLIB$$0.findById(<generated>)
+	at com.mphasis.controller.EmployeeController.findById(EmployeeController.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-13 15:56:11 INFO  c.m.controller.EmployeeController Request to find Employee by Id
+2025-12-13 15:56:11 INFO  com.mphasis.aop.LoggingAspect Entering method: findById
+2025-12-13 15:56:11 INFO  com.mphasis.aop.LoggingAspect Exiting method: findById
+2025-12-13 15:56:11 INFO  com.mphasis.aop.LoggingAspect findById
+2025-12-13 16:48:26 INFO  c.m.controller.EmployeeController Request to find Employee by Id
+2025-12-13 16:48:26 INFO  com.mphasis.aop.LoggingAspect Entering method: findById
+2025-12-13 16:48:26 INFO  com.mphasis.aop.LoggingAspect Exiting method: findById
+2025-12-13 16:48:26 INFO  com.mphasis.aop.LoggingAspect findById
+2025-12-13 16:50:46 INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Application shutdown requested.
+2025-12-13 16:50:46 INFO  o.s.boot.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-13 16:50:46 INFO  o.s.boot.tomcat.GracefulShutdown Graceful shutdown complete
+2025-12-13 16:50:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-13 16:50:46 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+2025-12-13 16:50:46 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
