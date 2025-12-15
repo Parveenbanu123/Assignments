@@ -41,4 +41,9 @@ public class ItemDao implements ItemDaoInterface{
 		
 	}
 
+	@Override
+	public List<Item> findItemsById(List<Long> ids) {
+		return repository.findAllById(ids);
+	}
+
 }

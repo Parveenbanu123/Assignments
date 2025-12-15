@@ -2,12 +2,12 @@ package com.mphasis.service;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.mphasis.dao.ItemDao;
+import com.mphasis.dto.ItemDto;
 import com.mphasis.entities.Item;
 import com.mphasis.exceptions.ItemNotFoundException;
 
@@ -31,7 +31,10 @@ public class ItemService implements ItemServiceInterface{
 
 	@Override
 	@Transactional
-	public Item save(Item item) {
+	public Item save(ItemDto itemDto) {
+		Item item=new Item();
+		item.setItemName(itemDto.getItemName());
+		item.setItemCost(itemDto.getItemCost());
 		return dao.save(item);
 	}
 

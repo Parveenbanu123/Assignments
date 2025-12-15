@@ -24,6 +24,11 @@ public class GlobalExceptionClass {
 		return new ResponseEntity<>(ex.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
+	@ExceptionHandler(OrderNotFoundException.class)
+	public ResponseEntity<String> handleOrderNotFoundException(OrderNotFoundException ex){
+		return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+	}
+	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<String> handleValidationException(MethodArgumentNotValidException ex) {
         // Get the first validation error message
@@ -32,6 +37,8 @@ public class GlobalExceptionClass {
                                 .getDefaultMessage();
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMessage);
     }
+	
+	
 	
 	
 }

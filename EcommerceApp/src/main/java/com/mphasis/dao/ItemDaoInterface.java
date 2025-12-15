@@ -11,4 +11,5 @@ public interface ItemDaoInterface {
 	public Item save(Item item);
 	public Item update(Item item);
 	public void delete(Long id);
+	public List<Item> findItemsById(List<Long> ids);
 }
