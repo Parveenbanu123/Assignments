@@ -1849,3 +1849,48 @@ Identify and stop the process that's listening on port 8092 or configure this ap
 2025-12-15 15:28:48 INFO  com.mphasis.aop.LoggingAspect Exiting method: ResponseEntity com.mphasis.controllers.OrderController.save(OrderDto)
 2025-12-15 15:28:48 INFO  com.mphasis.aop.LoggingAspect Result-><201 CREATED Created,Order [ordId=2, ordDate=2025-12-15, custName=Parveen, itemList=[Item [itemId=1, itemName=Mouse, itemCost=2700.0, orderList=[]], Item [itemId=2, itemName=Laptop, itemCost=5000.0, orderList=[]]]],[]>
 2025-12-15 15:28:48 INFO  com.mphasis.aop.LoggingAspect save
+2025-12-15 15:37:24 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-12-15 15:37:24 INFO  o.s.boot.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-15 15:37:24 INFO  o.s.boot.tomcat.GracefulShutdown Graceful shutdown complete
+2025-12-15 15:37:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 15:37:24 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-7 - Shutdown initiated...
+2025-12-15 15:37:24 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-7 - Shutdown completed.
+2025-12-15 15:37:25 INFO  com.mphasis.EcommerceAppApplication Starting EcommerceAppApplication using Java 21.0.4 with PID 3416 (C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp\target\classes started by s.parveenbanu in C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp)
+2025-12-15 15:37:25 DEBUG com.mphasis.EcommerceAppApplication Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-15 15:37:25 INFO  com.mphasis.EcommerceAppApplication No active profile set, falling back to 1 default profile: "default"
+2025-12-15 15:37:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15 15:37:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+2025-12-15 15:37:25 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat initialized with port 8093 (http)
+2025-12-15 15:37:25 INFO  o.a.catalina.core.StandardService Starting service [Tomcat]
+2025-12-15 15:37:25 INFO  o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-15 15:37:25 INFO  o.s.b.w.c.s.WebApplicationContextInitializer Root WebApplicationContext: initialization completed in 421 ms
+2025-12-15 15:37:25 INFO  o.h.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15 15:37:25 INFO  o.s.o.j.p.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15 15:37:25 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-8 - Starting...
+2025-12-15 15:37:25 INFO  com.zaxxer.hikari.pool.HikariPool HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2defae54
+2025-12-15 15:37:25 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-8 - Start completed.
+2025-12-15 15:37:25 INFO  o.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mysql_spring_proj]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.42
+	Default catalog/schema: mysql_spring_proj/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15 15:37:25 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15 15:37:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 15:37:26 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-15 15:37:26 INFO  o.s.b.a.e.web.EndpointLinksResolver Exposing 13 endpoints beneath base path '/actuator'
+2025-12-15 15:37:26 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat started on port 8093 (http) with context path '/'
+2025-12-15 15:37:26 INFO  com.mphasis.EcommerceAppApplication Started EcommerceAppApplication in 1.724 seconds (process running for 1644.066)
+2025-12-15 15:37:26 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+2025-12-15 15:44:14 INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Application shutdown requested.
+2025-12-15 15:44:14 INFO  o.s.boot.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-15 15:44:14 INFO  o.s.boot.tomcat.GracefulShutdown Graceful shutdown complete
+2025-12-15 15:44:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 15:44:14 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-8 - Shutdown initiated...
+2025-12-15 15:44:14 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-8 - Shutdown completed.

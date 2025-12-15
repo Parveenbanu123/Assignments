@@ -30,15 +30,25 @@ public class EmployeeController {
 		return service.findAll();
 	}
 	
-	@GetMapping("/{id}")
-	public Employee findById(@PathVariable Long id) {
+	@GetMapping("eid/{eid}")
+	public Employee findById(@PathVariable Long eid) {
 		logger.info("Request to find Employee by Id");
-		return service.findById(id);
+		return service.findById(eid);
 	}
 	
 	@PostMapping("/")
 	public Employee save(@RequestBody Employee emp) {
 		logger.info("Request to save an Employee");
 		return service.save(emp);
+	}
+	
+	@GetMapping("/ename/{name}")
+	public Employee findByEname(@PathVariable String name) {
+		return service.findByEname(name);
+	}
+	
+	@GetMapping("salary/{salary}")
+	public List<Employee> findBySalary(@PathVariable double salary){
+		return service.findBySalary(salary);
 	}
 }

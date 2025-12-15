@@ -30,13 +30,9 @@ public class Item {
 	@JsonBackReference
 	private List<Order> orderList;
 	
-	
-	
 	public Item() {
 		super();
 	}
-
-	
 
 	public Item(@Size(min = 3, message = "Item name must be minimum of 3 characters") String itemName,
 			@DecimalMin(value = "1000", message = "Item cost must be above 1000") double itemCost,
