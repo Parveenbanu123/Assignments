@@ -1,0 +1,223 @@
+2025-12-15 09:26:16 INFO  com.mphasis.EcommerceAppApplication Starting EcommerceAppApplication using Java 21.0.4 with PID 15508 (C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp\target\classes started by s.parveenbanu in C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp)
+2025-12-15 09:26:16 DEBUG com.mphasis.EcommerceAppApplication Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-15 09:26:16 INFO  com.mphasis.EcommerceAppApplication No active profile set, falling back to 1 default profile: "default"
+2025-12-15 09:26:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-15 09:26:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-15 09:26:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15 09:26:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2025-12-15 09:26:18 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat initialized with port 8092 (http)
+2025-12-15 09:26:18 INFO  o.a.catalina.core.StandardService Starting service [Tomcat]
+2025-12-15 09:26:18 INFO  o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-15 09:26:18 INFO  o.s.b.w.c.s.WebApplicationContextInitializer Root WebApplicationContext: initialization completed in 1808 ms
+2025-12-15 09:26:18 INFO  o.h.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15 09:26:18 INFO  org.hibernate.Version HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-15 09:26:19 INFO  o.s.o.j.p.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15 09:26:19 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2025-12-15 09:26:19 INFO  com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41fa341a
+2025-12-15 09:26:19 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2025-12-15 09:26:19 INFO  o.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mysql_spring_proj]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.42
+	Default catalog/schema: mysql_spring_proj/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15 09:26:19 ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean Failed to initialize JPA EntityManagerFactory: Entity 'com.mphasis.entities.Order' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+2025-12-15 09:26:19 WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Entity 'com.mphasis.entities.Order' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+2025-12-15 09:26:19 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+2025-12-15 09:26:19 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+2025-12-15 09:26:19 INFO  o.a.catalina.core.StandardService Stopping service [Tomcat]
+2025-12-15 09:26:19 INFO  o.s.b.a.l.ConditionEvaluationReportLogger 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-15 09:26:19 ERROR o.s.boot.SpringApplication Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Entity 'com.mphasis.entities.Order' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:454)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1374)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at com.mphasis.EcommerceAppApplication.main(EcommerceAppApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.hibernate.AnnotationException: Entity 'com.mphasis.entities.Order' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+	at org.hibernate.boot.model.internal.InheritanceState.determineDefaultAccessType(InheritanceState.java:281)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:232)
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:165)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:365)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:209)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:243)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:196)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:307)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.coordinateProcessors(MetadataBuildingProcess.java:341)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:215)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1395)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1475)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1457)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	... 18 common frames omitted
+2025-12-15 09:28:42 INFO  com.mphasis.EcommerceAppApplication Starting EcommerceAppApplication using Java 21.0.4 with PID 9004 (C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp\target\classes started by s.parveenbanu in C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp)
+2025-12-15 09:28:42 DEBUG com.mphasis.EcommerceAppApplication Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-15 09:28:42 INFO  com.mphasis.EcommerceAppApplication No active profile set, falling back to 1 default profile: "default"
+2025-12-15 09:28:42 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-15 09:28:42 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-15 09:28:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15 09:28:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2025-12-15 09:28:44 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat initialized with port 8092 (http)
+2025-12-15 09:28:44 INFO  o.a.catalina.core.StandardService Starting service [Tomcat]
+2025-12-15 09:28:44 INFO  o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-15 09:28:44 INFO  o.s.b.w.c.s.WebApplicationContextInitializer Root WebApplicationContext: initialization completed in 1622 ms
+2025-12-15 09:28:44 INFO  o.h.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15 09:28:44 INFO  org.hibernate.Version HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-15 09:28:45 INFO  o.s.o.j.p.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15 09:28:45 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+2025-12-15 09:28:45 INFO  com.zaxxer.hikari.pool.HikariPool HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41199958
+2025-12-15 09:28:45 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+2025-12-15 09:28:45 INFO  o.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mysql_spring_proj]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.42
+	Default catalog/schema: mysql_spring_proj/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15 09:28:46 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15 09:28:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 09:28:46 INFO  o.s.d.j.r.q.QueryEnhancerFactories Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-15 09:28:47 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-15 09:28:47 INFO  o.s.b.a.e.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+2025-12-15 09:28:47 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat started on port 8092 (http) with context path '/'
+2025-12-15 09:28:47 INFO  com.mphasis.EcommerceAppApplication Started EcommerceAppApplication in 5.668 seconds (process running for 6.799)
+2025-12-15 09:28:48 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-15 09:28:48 INFO  o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2025-12-15 09:28:48 INFO  o.s.web.servlet.DispatcherServlet Completed initialization in 1 ms
+2025-12-15 09:31:09 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-12-15 09:32:01 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-12-15 09:32:01 INFO  o.s.boot.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-15 09:32:01 INFO  o.s.boot.tomcat.GracefulShutdown Graceful shutdown complete
+2025-12-15 09:32:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 09:32:01 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+2025-12-15 09:32:01 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+2025-12-15 09:32:01 INFO  com.mphasis.EcommerceAppApplication Starting EcommerceAppApplication using Java 21.0.4 with PID 9004 (C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp\target\classes started by s.parveenbanu in C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp)
+2025-12-15 09:32:01 DEBUG com.mphasis.EcommerceAppApplication Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-15 09:32:01 INFO  com.mphasis.EcommerceAppApplication No active profile set, falling back to 1 default profile: "default"
+2025-12-15 09:32:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15 09:32:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2025-12-15 09:32:02 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat initialized with port 8092 (http)
+2025-12-15 09:32:02 INFO  o.a.catalina.core.StandardService Starting service [Tomcat]
+2025-12-15 09:32:02 INFO  o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-15 09:32:02 INFO  o.s.b.w.c.s.WebApplicationContextInitializer Root WebApplicationContext: initialization completed in 437 ms
+2025-12-15 09:32:02 INFO  o.h.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15 09:32:02 INFO  o.s.o.j.p.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15 09:32:02 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-2 - Starting...
+2025-12-15 09:32:02 INFO  com.zaxxer.hikari.pool.HikariPool HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a1ad4d6
+2025-12-15 09:32:02 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-2 - Start completed.
+2025-12-15 09:32:02 INFO  o.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mysql_spring_proj]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.42
+	Default catalog/schema: mysql_spring_proj/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15 09:32:02 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15 09:32:02 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 09:32:02 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-15 09:32:03 INFO  o.s.b.a.e.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+2025-12-15 09:32:03 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat started on port 8092 (http) with context path '/'
+2025-12-15 09:32:03 INFO  com.mphasis.EcommerceAppApplication Started EcommerceAppApplication in 1.279 seconds (process running for 202.051)
+2025-12-15 09:32:03 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+2025-12-15 09:32:07 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-15 09:32:07 INFO  o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2025-12-15 09:32:07 INFO  o.s.web.servlet.DispatcherServlet Completed initialization in 2 ms
+2025-12-15 09:32:07 INFO  com.mphasis.aop.LoggingAspect Entering method: findById
+2025-12-15 09:32:07 INFO  com.mphasis.aop.LoggingAspect Exiting method: findById
+2025-12-15 09:32:07 INFO  com.mphasis.aop.LoggingAspect Result-><302 FOUND Found,com.mphasis.entities.Item@70cd1750,[]>
+2025-12-15 09:32:07 INFO  com.mphasis.aop.LoggingAspect findById
+2025-12-15 09:38:28 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-12-15 09:38:28 INFO  o.s.boot.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-15 09:38:28 INFO  o.s.boot.tomcat.GracefulShutdown Graceful shutdown complete
+2025-12-15 09:38:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 09:38:28 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown initiated...
+2025-12-15 09:38:28 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown completed.
+2025-12-15 09:38:28 INFO  com.mphasis.EcommerceAppApplication Starting EcommerceAppApplication using Java 21.0.4 with PID 9004 (C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp\target\classes started by s.parveenbanu in C:\Users\s.parveenbanu\git\AssignmentsNew\EcommerceApp)
+2025-12-15 09:38:28 DEBUG com.mphasis.EcommerceAppApplication Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-15 09:38:28 INFO  com.mphasis.EcommerceAppApplication No active profile set, falling back to 1 default profile: "default"
+2025-12-15 09:38:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15 09:38:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2025-12-15 09:38:28 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat initialized with port 8092 (http)
+2025-12-15 09:38:28 INFO  o.a.catalina.core.StandardService Starting service [Tomcat]
+2025-12-15 09:38:28 INFO  o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-15 09:38:28 INFO  o.s.b.w.c.s.WebApplicationContextInitializer Root WebApplicationContext: initialization completed in 384 ms
+2025-12-15 09:38:28 INFO  o.h.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15 09:38:28 INFO  o.s.o.j.p.SpringPersistenceUnitInfo No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15 09:38:28 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-3 - Starting...
+2025-12-15 09:38:28 INFO  com.zaxxer.hikari.pool.HikariPool HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28d265c
+2025-12-15 09:38:28 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-3 - Start completed.
+2025-12-15 09:38:28 INFO  o.hibernate.orm.connections.pooling HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/mysql_spring_proj]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.42
+	Default catalog/schema: mysql_spring_proj/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15 09:38:29 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15 09:38:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 09:38:29 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-15 09:38:29 INFO  o.s.b.a.e.web.EndpointLinksResolver Exposing 1 endpoint beneath base path '/actuator'
+2025-12-15 09:38:29 INFO  o.s.boot.tomcat.TomcatWebServer Tomcat started on port 8092 (http) with context path '/'
+2025-12-15 09:38:29 INFO  com.mphasis.EcommerceAppApplication Started EcommerceAppApplication in 1.147 seconds (process running for 588.497)
+2025-12-15 09:38:29 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener Condition evaluation unchanged
+2025-12-15 09:38:37 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-15 09:38:37 INFO  o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2025-12-15 09:38:37 INFO  o.s.web.servlet.DispatcherServlet Completed initialization in 1 ms
+2025-12-15 09:38:37 INFO  com.mphasis.aop.LoggingAspect Entering method: findById
+2025-12-15 09:38:37 INFO  com.mphasis.aop.LoggingAspect Exiting method: findById
+2025-12-15 09:38:37 INFO  com.mphasis.aop.LoggingAspect Result-><302 FOUND Found,com.mphasis.entities.Item@7d11e7a9,[]>
+2025-12-15 09:38:37 INFO  com.mphasis.aop.LoggingAspect findById
+2025-12-15 09:39:43 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-12-15 09:39:58 INFO  com.mphasis.aop.LoggingAspect Entering method: findAll
+2025-12-15 09:39:58 INFO  com.mphasis.aop.LoggingAspect Exiting method: findAll
+2025-12-15 09:39:58 INFO  com.mphasis.aop.LoggingAspect Result-><200 OK OK,[com.mphasis.entities.Item@5f4aae46, com.mphasis.entities.Item@4388430],[]>
+2025-12-15 09:39:58 INFO  com.mphasis.aop.LoggingAspect findAll
+2025-12-15 09:41:29 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-12-15 09:41:29 INFO  o.s.boot.tomcat.GracefulShutdown Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-15 09:41:30 INFO  o.s.boot.tomcat.GracefulShutdown Graceful shutdown complete
+2025-12-15 09:41:30 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 09:41:30 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-3 - Shutdown initiated...
+2025-12-15 09:41:30 INFO  com.zaxxer.hikari.HikariDataSource HikariPool-3 - Shutdown completed.
